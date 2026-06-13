@@ -1,0 +1,6 @@
+node_modules/
+.wrangler/
+*.tar.gz
+*.zip
+.dev.vars
+.env

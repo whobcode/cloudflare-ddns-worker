@@ -1,0 +1,19 @@
+name = "cloudflare-ddns-worker"
+main = "index.js"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Cron trigger - runs every 5 minutes as backup
+[triggers]
+crons = ["*/5 * * * *"]
+
+# Environment variables (set these in your Cloudflare dashboard or via secrets)
+# These are placeholders - you'll set the actual values when deploying
+[vars]
+# DDNS_HOSTNAME = "your-hostname.example.com"
+
+# Secrets (set via: wrangler secret put SECRET_NAME)
+# CLOUDFLARE_API_TOKEN - Your Cloudflare API token with DNS edit permissions
+# CLOUDFLARE_ZONE_ID - Your Cloudflare zone ID
+# DDNS_USERNAME - Username for DDNS authentication
+# DDNS_PASSWORD - Password for DDNS authentication
